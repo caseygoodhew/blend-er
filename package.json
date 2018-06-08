@@ -1,5 +1,5 @@
 {
-    "name": "blend-er",
+    "name": "@caseygoodhew/blend-er",
     "version": "1.0.0",
     "description": "Blender resolves relative urls",
     "main": "index.js",
