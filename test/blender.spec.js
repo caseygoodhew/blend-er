@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var blender = require('../index');
+const expect = require('chai').expect;
+const blender = require('../index');
 
 describe('just your average blender tests', function() {
     it('always returns a full request url', function() {
@@ -71,12 +71,17 @@ describe('just your average blender tests', function() {
     });
 
     it('lets print out our test cases for the README', function() {
-        const printLine = (relative, context) => {
-            const command = `blender('${relative}', '${context}');`
-            console.log(`${command.padEnd(45)}// ${blender(relative, context)}`)
+
+        const padRight = (str, length) => {
+            return str.split('').concat(Array(length - str.length).join(' ')).join('');
         }
 
-        const printBlock = (array) => {
+        const printLine = (relative, context) => {
+            const command = `blender('${relative}', '${context}');`
+            console.log(`${padRight(command, 46)}// ${blender(relative, context)}`)
+        }
+
+        const printBlock = array => {
             console.log('');
             console.log('```js');
             array.forEach(a => printLine(...a));
