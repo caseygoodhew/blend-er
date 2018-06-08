@@ -1,6 +1,6 @@
 {
     "name": "good-blender",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Blender resolves relative urls",
     "main": "index.js",
     "scripts": {
