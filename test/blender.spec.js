@@ -69,4 +69,43 @@ describe('just your average blender tests', function() {
         expect(blender(123, {})).to.equal('');
         expect(blender([], function() {})).to.equal('');
     });
+
+    it('lets print out our test cases for the README', function() {
+        const printLine = (relative, context) => {
+            const command = `blender('${relative}', '${context}');`
+            console.log(`${command.padEnd(45)}// '${blender(relative, context)}'`)
+        }
+
+        const printBlock = (array) => {
+            console.log('');
+            console.log('```js');
+            array.forEach(a => printLine(...a));
+            console.log('```');
+        }
+
+        printBlock([
+            ['/api', 'http://c.d/test/status'],
+            ['api', 'http://c.d/test/status'],
+            ['./api', 'http://c.d/test/status'],
+            ['../api', 'http://c.d/test/status'],
+            ['../api', 'http://c.d/test'],
+            ['../../api', 'http://c.d/test']
+        ]);
+
+        printBlock([
+            ['/api', 'http://c.d?query'],
+            ['/api?query', 'http://c.d'],
+            ['/api?query', 'http://c.d?nop']
+        ]);
+
+        printBlock([
+            ['/api', 'http://c.d#hash'],
+            ['/api#hash', 'http://c.d#nop'],
+            ['/api#hash', 'http://c.d'],
+        ]);
+
+        printBlock([
+            ['http://a.b/api', 'http://c.d'],
+        ]);
+    });
 });
