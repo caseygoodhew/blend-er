@@ -3,12 +3,12 @@ Blender resolves relative urls.
 
 ## installation
 ```bash
-$ npm install blend-er
+$ npm install good-blend
 ```
 
 ## usage
 ```js
-const blender = require('blend-er');
+const blender = require('good-blender');
 
 const relative = '/api';
 const context = 'http://mysite.com/homepage';
