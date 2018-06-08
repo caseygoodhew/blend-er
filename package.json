@@ -1,0 +1,32 @@
+{
+    "name": "blend-er",
+    "version": "1.0.0",
+    "description": "Blender resolves relative urls",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha --reporter spec"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/caseygoodhew/blend-er.git"
+    },
+    "keywords": [
+        "url",
+        "relative",
+        "absolute",
+        "resolve",
+        "resolver",
+        "combine",
+        "normalize"
+    ],
+    "author": "Casey Goodhew",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/caseygoodhew/blend-er/issues"
+    },
+    "homepage": "https://github.com/caseygoodhew/blend-er#readme",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.2.0"
+    }
+}
