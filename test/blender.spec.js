@@ -73,7 +73,7 @@ describe('just your average blender tests', function() {
     it('lets print out our test cases for the README', function() {
         const printLine = (relative, context) => {
             const command = `blender('${relative}', '${context}');`
-            console.log(`${command.padEnd(45)}// '${blender(relative, context)}'`)
+            console.log(`${command.padEnd(45)}// ${blender(relative, context)}`)
         }
 
         const printBlock = (array) => {
