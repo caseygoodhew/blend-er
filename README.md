@@ -3,7 +3,7 @@ Blender resolves relative urls.
 
 ## installation
 ```bash
-$ npm install good-blend
+$ npm install good-blender
 ```
 
 ## usage
